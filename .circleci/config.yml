@@ -14,8 +14,8 @@ jobs:
           tar zxf julia-${JULIAVERSION}.${JULIAMINOR}-linux-x86_64.tar.gz
       - run: |
           ./julia-${JULIAVERSION}.${JULIAMINOR}/bin/julia --code-coverage -e 'using Pkg; Pkg.update(); Pkg.activate(pwd()); Pkg.instantiate(); Pkg.build("JSOSolverTemplates"); Pkg.test("JSOSolverTemplates"; coverage=true);'
-      - run: |
-          ./julia-${JULIAVERSION}.${JULIAMINOR}/bin/julia -e 'using Pkg; Pkg.activate(pwd()); Pkg.instantiate(); Pkg.add("Coverage"); using Coverage; Codecov.submit(Coveralls.process_folder());'
+      # - run: |
+      #     ./julia-${JULIAVERSION}.${JULIAMINOR}/bin/julia -e 'using Pkg; Pkg.activate(pwd()); Pkg.instantiate(); Pkg.add("Coverage"); using Coverage; Codecov.submit(Coveralls.process_folder());'
 
 workflows:
   version: 2
