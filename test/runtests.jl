@@ -1,5 +1,5 @@
 # this package
-using JSOSolverTemplates
+using JSOSolverTemplate
 
 using Logging
 using NLPModels
