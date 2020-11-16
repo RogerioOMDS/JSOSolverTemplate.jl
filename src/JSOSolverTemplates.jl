@@ -1,4 +1,4 @@
-module JSOSolverTemplate
+module JSOSolverTemplates
 
 # standard lib
 using LinearAlgebra
